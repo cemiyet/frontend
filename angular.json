@@ -50,8 +50,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./cemiyet-webpack.config.js"
+            },
             "outputPath": "dist/cemiyet",
             "index": "src/cemiyet/src/index.html",
             "main": "src/cemiyet/src/main.ts",
@@ -100,7 +103,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
             "browserTarget": "cemiyet:build"
           },
