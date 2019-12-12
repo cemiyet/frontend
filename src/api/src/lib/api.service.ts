@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ApiService {
-  constructor() { }
+  private uri = 'http://localhost:5000/';
+
+  constructor() {
+    console.log('api service created');
+    console.log(this.uri);
+  }
 }
