@@ -1,16 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ApiModule, ApiService } from 'api';
+
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 
-import { ApiModule, ApiService } from 'api';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
