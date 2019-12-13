@@ -2,19 +2,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'Aquamarine': '#61efce',
-        'Champagne': '#efdab9',
-        'De York': '#81c08b',
-        'Don Juan': '#584b4f',
-        'Eclipse': '#3d3a3a',
-        'Gulf Stream': '#78b0a0',
-        'Kournikova': '#ffd152',
-        'Orange': '#ebac00',
-        'Schooner': '#8e8373',
-        'Toledo': '#343233',
-        'Turbo': '#ffc31f',
-        'Turquoise': '#45edc6',
-        'White Linen': '#efeae1'
+        'aquamarine': '#61efce',
+        'champagne': '#efdab9',
+        'de-york': '#81c08b',
+        'don-juan': '#584b4f',
+        'eclipse': '#3d3a3a',
+        'gulf-stream': '#78b0a0',
+        'kournikova': '#ffd152',
+        'orange': '#ebac00',
+        'schooner': '#8e8373',
+        'toledo': '#343233',
+        'turbo': '#ffc31f',
+        'turquoise': '#45edc6',
+        'white-linen': '#efeae1'
       }
     }
   },
