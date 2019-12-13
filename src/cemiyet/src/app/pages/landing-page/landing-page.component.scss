@@ -1,0 +1,11 @@
+.landing-page {
+  @apply flex flex-col p-6 bg-toledo h-screen;
+
+  header {
+    @apply flex items-center justify-between;
+  }
+
+  article {
+    @apply h-full flex items-center justify-center px-20;
+  }
+}
