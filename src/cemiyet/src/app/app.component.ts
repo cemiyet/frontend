@@ -5,7 +5,7 @@ import { ApiService } from 'api';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: []
 })
 export class AppComponent {
   title = 'cemiyet';
