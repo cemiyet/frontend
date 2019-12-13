@@ -2,8 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { ApiModule, ApiService } from 'api';
+import { SharedModule } from './shared/shared.module';
+
 import { AppComponent } from './app.component';
+
+import { ApiModule, ApiService } from 'api';
 
 @NgModule({
   declarations: [
@@ -12,6 +15,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     ApiModule
   ],
   providers: [ApiService],
