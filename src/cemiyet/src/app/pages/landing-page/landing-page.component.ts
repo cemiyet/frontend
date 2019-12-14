@@ -10,4 +10,8 @@ export class LandingPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }
+
+  onLoginClicked(event: Event) {
+    console.log('onLoginClicked: ', event);
+  }
 }
