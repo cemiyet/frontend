@@ -2,10 +2,10 @@
   @apply flex flex-col p-6 bg-toledo h-screen;
 
   header {
-    @apply flex items-center justify-between;
+    @apply mx-6 flex items-center justify-between;
   }
 
   article {
-    @apply h-full flex items-center justify-center px-20;
+    @apply m-6 h-full flex items-center justify-center px-20;
   }
 }
