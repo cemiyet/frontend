@@ -11,7 +11,7 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit() { }
 
-  onLoginClicked(event: Event) {
+  onLogin(event: Event) {
     console.log('onLoginClicked: ', event);
   }
 }
