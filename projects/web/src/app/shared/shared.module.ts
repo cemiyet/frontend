@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { LogoComponent } from './components/logo/logo.component';
 import { ButtonComponent } from './components/button/button.component';
 import { IllustrationComponent } from './components/illustration/illustration.component';
+import { TextInputComponent } from './components/text-input/text-input.component';
 
 @NgModule({
   imports: [
@@ -12,12 +13,14 @@ import { IllustrationComponent } from './components/illustration/illustration.co
   exports: [
     LogoComponent,
     ButtonComponent,
-    IllustrationComponent
+    IllustrationComponent,
+    TextInputComponent
   ],
   declarations: [
     LogoComponent,
     ButtonComponent,
-    IllustrationComponent
+    IllustrationComponent,
+    TextInputComponent
   ],
   providers: [],
 })

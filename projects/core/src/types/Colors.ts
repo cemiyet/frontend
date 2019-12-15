@@ -112,6 +112,7 @@ type CemiyetColorPalette =
   | 'kournikova'
   | 'orange-peel'
   | 'schooner'
+  | 'space-shuttle'
   | 'toledo'
   | 'turbo'
   | 'turquoise'

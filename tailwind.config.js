@@ -11,6 +11,7 @@ module.exports = {
         'kournikova': '#ffd152',
         'orange-peel': '#ff9900',
         'schooner': '#8e8373',
+        'space-shuttle': '#494236',
         'toledo': '#343233',
         'turbo': '#ffc31f',
         'turquoise': '#45edc6',
