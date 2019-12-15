@@ -19,11 +19,17 @@
       "dom"
     ],
     "paths": {
-      "api": [
+      "@cemiyet/api": [
         "dist/api"
       ],
-      "api/*": [
+      "@cemiyet/api/*": [
         "dist/api/*"
+      ],
+      "@cemiyet/core": [
+        "dist/core"
+      ],
+      "@cemiyet/core/*": [
+        "dist/core/*"
       ]
     }
   },

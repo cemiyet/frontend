@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FontSize } from '../../types';
+
+import { FontSize } from '@cemiyet/core';
+
 
 @Component({
   selector: 'app-button',
