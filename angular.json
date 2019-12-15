@@ -38,15 +38,15 @@
         }
       }
     },
-    "cemiyet": {
+    "web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/cemiyet",
-      "sourceRoot": "projects/cemiyet/src",
+      "root": "projects/web",
+      "sourceRoot": "projects/web/src",
       "prefix": "app",
       "architect": {
         "build": {
@@ -55,18 +55,18 @@
             "customWebpackConfig": {
               "path": "./cemiyet-webpack.config.js"
             },
-            "outputPath": "dist/cemiyet",
-            "index": "projects/cemiyet/src/index.html",
-            "main": "projects/cemiyet/src/main.ts",
-            "polyfills": "projects/cemiyet/src/polyfills.ts",
-            "tsConfig": "projects/cemiyet/tsconfig.app.json",
+            "outputPath": "dist/web",
+            "index": "projects/web/src/index.html",
+            "main": "projects/web/src/main.ts",
+            "polyfills": "projects/web/src/polyfills.ts",
+            "tsConfig": "projects/web/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "projects/cemiyet/src/favicon.ico",
-              "projects/cemiyet/src/assets"
+              "projects/web/src/favicon.ico",
+              "projects/web/src/assets"
             ],
             "styles": [
-              "projects/cemiyet/src/styles.scss"
+              "projects/web/src/styles.scss"
             ],
             "scripts": []
           },
@@ -74,8 +74,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/cemiyet/src/environments/environment.ts",
-                  "with": "projects/cemiyet/src/environments/environment.prod.ts"
+                  "replace": "projects/web/src/environments/environment.ts",
+                  "with": "projects/web/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -105,33 +105,33 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "cemiyet:build"
+            "browserTarget": "web:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cemiyet:build:production"
+              "browserTarget": "web:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cemiyet:build"
+            "browserTarget": "web:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/cemiyet/src/test.ts",
-            "polyfills": "projects/cemiyet/src/polyfills.ts",
-            "tsConfig": "projects/cemiyet/tsconfig.spec.json",
-            "karmaConfig": "projects/cemiyet/karma.conf.js",
+            "main": "projects/web/src/test.ts",
+            "polyfills": "projects/web/src/polyfills.ts",
+            "tsConfig": "projects/web/tsconfig.spec.json",
+            "karmaConfig": "projects/web/karma.conf.js",
             "assets": [
-              "projects/cemiyet/src/favicon.ico",
-              "projects/cemiyet/src/assets"
+              "projects/web/src/favicon.ico",
+              "projects/web/src/assets"
             ],
             "styles": [
-              "projects/cemiyet/src/styles.scss"
+              "projects/web/src/styles.scss"
             ],
             "scripts": []
           }
@@ -140,9 +140,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/cemiyet/tsconfig.app.json",
-              "projects/cemiyet/tsconfig.spec.json",
-              "projects/cemiyet/e2e/tsconfig.json"
+              "projects/web/tsconfig.app.json",
+              "projects/web/tsconfig.spec.json",
+              "projects/web/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -152,17 +152,52 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/cemiyet/e2e/protractor.conf.js",
-            "devServerTarget": "cemiyet:serve"
+            "protractorConfig": "projects/web/e2e/protractor.conf.js",
+            "devServerTarget": "web:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cemiyet:serve:production"
+              "devServerTarget": "web:serve:production"
             }
+          }
+        }
+      }
+    },
+    "core": {
+      "projectType": "library",
+      "root": "projects/core",
+      "sourceRoot": "projects/core/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/core/tsconfig.lib.json",
+            "project": "projects/core/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/core/src/test.ts",
+            "tsConfig": "projects/core/tsconfig.spec.json",
+            "karmaConfig": "projects/core/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/core/tsconfig.lib.json",
+              "projects/core/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
     }
   },
-  "defaultProject": "cemiyet"
+  "defaultProject": "web"
 }
