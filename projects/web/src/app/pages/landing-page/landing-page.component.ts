@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ApiService } from '@cemiyet/api';
+
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() { }
 
