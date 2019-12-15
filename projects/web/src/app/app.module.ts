@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { ApiModule, ApiService } from '@cemiyet/api';
+import { ApiModule } from '@cemiyet/api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
@@ -21,7 +21,7 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
     SharedModule,
     ApiModule
   ],
-  providers: [ApiService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
