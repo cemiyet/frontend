@@ -1,3 +1,13 @@
 .cemiyet-button {
-  @apply px-5 py-1 font-normal rounded-lg;
+  @apply px-5 py-1;
+  @apply font-normal;
+  @apply rounded-lg;
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  &:hover {
+    @apply shadow-outline;
+  }
 }
