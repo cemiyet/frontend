@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FontSize } from '../../types';
 
 @Component({
   selector: 'app-button',
@@ -9,9 +10,10 @@ export class ButtonComponent implements OnInit {
   @Input() text = 'pass text';
   @Input() textColor = 'toledo';
   @Input() bgColor = 'kournikova';
-  @Input() textSize = 'l';
+  @Input() fontSize: FontSize = 'l';
 
   constructor() { }
 
   ngOnInit() { }
 }
+
