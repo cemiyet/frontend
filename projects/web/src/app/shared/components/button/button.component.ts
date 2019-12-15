@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { FontSize } from '@cemiyet/core';
+import { Color, FontSize } from '@cemiyet/core';
 
 
 @Component({
@@ -10,8 +10,8 @@ import { FontSize } from '@cemiyet/core';
 })
 export class ButtonComponent implements OnInit {
   @Input() text = 'pass text';
-  @Input() textColor = 'toledo';
-  @Input() bgColor = 'kournikova';
+  @Input() textColor: Color = 'toledo';
+  @Input() bgColor: Color = 'kournikova';
   @Input() fontSize: FontSize = 'l';
 
   constructor() { }

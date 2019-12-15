@@ -22,14 +22,8 @@
       "@cemiyet/api": [
         "dist/api"
       ],
-      "@cemiyet/api/*": [
-        "dist/api/*"
-      ],
       "@cemiyet/core": [
         "dist/core"
-      ],
-      "@cemiyet/core/*": [
-        "dist/core/*"
       ]
     }
   },

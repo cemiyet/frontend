@@ -9,7 +9,7 @@ module.exports = {
         'eclipse': '#3d3a3a',
         'gulf-stream': '#78b0a0',
         'kournikova': '#ffd152',
-        'orange': '#ebac00',
+        'orange-peel': '#ff9900',
         'schooner': '#8e8373',
         'toledo': '#343233',
         'turbo': '#ffc31f',
