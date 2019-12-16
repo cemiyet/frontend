@@ -5,7 +5,7 @@
     {{icon}}
   </i>
 
-  <input type="text" [id]="id" [name]="name" [placeholder]="placeholder" [class]=""
+  <input [type]="inputType" [id]="id" [name]="name" [placeholder]="placeholder" [class]=""
          class="text-{{textAlignment}} text-{{textColor}} placeholder-{{textColor}} bg-{{bgColor}}"
          [class.has-icon-left]="icon && iconLocation == 'left'"
          [class.has-icon-right]="icon && iconLocation == 'right'">
