@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { Color, TextAlignment } from '@cemiyet/core';
 
@@ -11,6 +11,8 @@ export class TextInputComponent implements OnInit {
   @Input() id: string;
   @Input() name: string;
   @Input() placeholder: string;
+  @Input() inputType: 'text' | 'password' | 'email' = 'text';
+
   @Input() bgColor: Color;
   @Input() textColor: Color;
   @Input() textAlignment: TextAlignment = 'left';
