@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { ApiModule } from '@cemiyet/api';
+import { ComponentsModule } from '@cemiyet/components';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
@@ -19,6 +20,7 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    ComponentsModule,
     ApiModule
   ],
   providers: [],
