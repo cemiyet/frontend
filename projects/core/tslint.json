@@ -4,7 +4,7 @@
     "directive-selector": [
       true,
       "attribute",
-      "cemiyet-core",
+      "cemiyetCore",
       "camelCase"
     ],
     "component-selector": [
