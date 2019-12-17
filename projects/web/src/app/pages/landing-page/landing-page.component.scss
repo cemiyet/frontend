@@ -19,8 +19,8 @@
     }
 
     .login-form {
-      @apply p-6 mt-12 max-w-xl;
-      @apply bg-space-shuttle text-white;
+      @apply p-6 mt-12 max-w-lg;
+      @apply text-white;
 
       @screen lg {
         @apply mt-0 pr-6 mr-12;
