@@ -10,6 +10,8 @@
     "e2e": "ng e2e",
     "build:core": "ng build core",
     "build:core:watch": "ng build core --watch",
+    "build:components": "ng build components",
+    "build:components:watch": "ng build components --watch",
     "build:api": "ng build api",
     "build:api:watch": "ng build api --watch"
   },
