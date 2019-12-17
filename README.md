@@ -10,5 +10,6 @@
 
 Consists of 3 projects;
 - [Core](projects/core): provides types.
+- [Components](projects/components): provides angular components.
 - [Api](projects/api): provides backend communication service and entity types.
 - [Web](projects/web): combines everything to create beautiful presentation. 

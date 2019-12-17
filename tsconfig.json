@@ -22,6 +22,9 @@
       "@cemiyet/api": [
         "dist/api"
       ],
+      "@cemiyet/components": [
+        "dist/components"
+      ],
       "@cemiyet/core": [
         "dist/core"
       ]
