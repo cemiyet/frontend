@@ -4,7 +4,8 @@
 
     <cemiyet-components-text-input class="w-full mx-6 md:max-w-xl" id="search" name="search"
                                    placeholder="Keşfetmeye Başla..." textAlignment="center"
-                                   icon="search" iconColor="kournikova" iconLocation="left"></cemiyet-components-text-input>
+                                   icon="search" iconColor="kournikova"
+                                   iconLocation="left"></cemiyet-components-text-input>
 
     <cemiyet-components-button text="Giriş" bgColor="kournikova" textColor="toledo" fontSize="l"
                                (click)="onLogin($event)"></cemiyet-components-button>
@@ -12,11 +13,40 @@
 
   <article>
     <div class="login-form">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi distinctio dolore et id nam nesciunt nulla odio ut? Aperiam beatae id quia rerum tempora. Accusamus debitis dicta eligendi iste perspiciatis.
+      <form class="w-full max-w-lg">
+
+        <div class="w-full mb-6">
+          <cemiyet-components-text-input id="username" label="Kullanıcı Adı" placeholder="Kullanıcı Adı"
+                                         error="Kullanıcı adınızı girmediniz.">
+          </cemiyet-components-text-input>
+        </div>
+
+        <div class="w-full mb-6">
+          <cemiyet-components-text-input type="password" label="Parolanız" placeholder="Parola"
+                                         error="İsminizi girmediniz.">
+          </cemiyet-components-text-input>
+        </div>
+
+        <div class="flex flex-wrap -mx-3 mb-6">
+
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <cemiyet-components-text-input label="İSMİNİZ" placeholder="İsim" error="İsminizi girmediniz.">
+            </cemiyet-components-text-input>
+          </div>
+
+          <div class="w-full md:w-1/2 px-3">
+            <cemiyet-components-text-input label="SOYİSMİNİZ" placeholder="Soyisim" error="Soyisminizi girmediniz."
+                                           hasError="true">
+            </cemiyet-components-text-input>
+          </div>
+
+        </div>
+      </form>
+
     </div>
     <div class="illustration">
-      <cemiyet-components-illustration fileName="undraw_book_lover_mkck.svg"
-                                       creator="Katerina Limpitsouni"></cemiyet-components-illustration>
+      <cemiyet-components-illustration fileName="undraw_book_lover_mkck.svg" creator="Katerina Limpitsouni">
+      </cemiyet-components-illustration>
     </div>
   </article>
 </div>

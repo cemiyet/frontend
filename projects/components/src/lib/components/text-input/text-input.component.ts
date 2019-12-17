@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 import { Color, TextAlignment } from '@cemiyet/core';
 
@@ -6,10 +6,9 @@ import { Color, TextAlignment } from '@cemiyet/core';
   selector: 'cemiyet-components-text-input',
   templateUrl: './text-input.component.html'
 })
-export class TextInputComponent implements OnInit {
+export class TextInputComponent implements AfterViewInit {
   @Input() id: string;
-  @Input() name: string;
-  @Input() placeholder = '';
+  @Input() placeholder: string;
   @Input() type: 'text' | 'password' | 'email' = 'text';
 
   @Input() bgColor: Color = 'space-shuttle';
@@ -26,7 +25,12 @@ export class TextInputComponent implements OnInit {
   @Input() error: string;
   @Input() hasError = false;
 
+  @ViewChild('inputIcon', {static: false})
+  inputIcon: ElementRef<HTMLElement>;
+
   constructor() { }
 
-  ngOnInit() { }
+  ngAfterViewInit() {
+    console.log(this.inputIcon);
+  }
 }
