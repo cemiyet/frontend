@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '@cemiyet/api';
 
 @Component({
-  selector: 'app-landing-page',
+  selector: 'cemiyet-web-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
