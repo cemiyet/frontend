@@ -1,20 +1,22 @@
 <div class="landing-page">
   <header>
-    <app-logo sideLength="50"></app-logo>
+    <cemiyet-components-logo sideLength="50"></cemiyet-components-logo>
 
-    <app-text-input id="search" name="search" placeholder="Keşfetmeye Başla..." textAlignment="center"
-                    bgColor="space-shuttle" textColor="kournikova"
-                    icon="search" iconColor="kournikova"></app-text-input>
+    <cemiyet-components-text-input class="w-full mx-6 md:max-w-xl" id="search" name="search"
+                                   placeholder="Keşfetmeye Başla..." textAlignment="center"
+                                   icon="search" iconColor="kournikova" iconLocation="left"></cemiyet-components-text-input>
 
-    <app-button text="Giriş" bgColor="kournikova" textColor="toledo" fontSize="l"
-                (click)="onLogin($event)"></app-button>
+    <cemiyet-components-button text="Giriş" bgColor="kournikova" textColor="toledo" fontSize="l"
+                               (click)="onLogin($event)"></cemiyet-components-button>
   </header>
+
   <article>
     <div class="login-form">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi, culpa dolorum eligendi error et facilis itaque laborum quibusdam quos repellendus reprehenderit repudiandae rerum soluta veniam. Beatae dolore id voluptates!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi distinctio dolore et id nam nesciunt nulla odio ut? Aperiam beatae id quia rerum tempora. Accusamus debitis dicta eligendi iste perspiciatis.
     </div>
     <div class="illustration">
-      <app-illustration fileName="undraw_book_lover_mkck.svg" creator="Katerina Limpitsouni"></app-illustration>
+      <cemiyet-components-illustration fileName="undraw_book_lover_mkck.svg"
+                                       creator="Katerina Limpitsouni"></cemiyet-components-illustration>
     </div>
   </article>
 </div>
