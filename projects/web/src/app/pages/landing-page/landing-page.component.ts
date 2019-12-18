@@ -16,4 +16,8 @@ export class LandingPageComponent implements OnInit {
   onLogin(event: Event) {
     console.log('onLoginClicked: ', event);
   }
+
+  onRegister(event: Event) {
+    console.log('onRegisterClicked: ', event);
+  }
 }
