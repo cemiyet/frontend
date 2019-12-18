@@ -8,7 +8,7 @@ import { Color, TextAlignment } from '@cemiyet/core';
 })
 export class TextInputComponent implements AfterViewInit {
   @Input() id: string;
-  @Input() placeholder: string;
+  @Input() placeholder = '';
   @Input() type: 'text' | 'password' | 'email' = 'text';
 
   @Input() bgColor: Color = 'space-shuttle';
@@ -27,8 +27,6 @@ export class TextInputComponent implements AfterViewInit {
 
   @ViewChild('inputIcon', {static: false})
   inputIcon: ElementRef<HTMLElement>;
-
-  constructor() { }
 
   ngAfterViewInit() {
     console.log(this.inputIcon);
