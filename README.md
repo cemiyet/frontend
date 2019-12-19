@@ -13,3 +13,6 @@ Consists of 3 projects;
 - [Components](projects/components): provides angular components.
 - [Api](projects/api): provides backend communication service and entity types.
 - [Web](projects/web): combines everything to create beautiful presentation. 
+
+
+<img src="landing-page.png" alt="Cemiyet Landing Page">
