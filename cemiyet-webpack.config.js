@@ -5,9 +5,9 @@ module.exports = {
         test: /\.scss$/,
         use: [
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
-              plugins: [require("tailwindcss")("./tailwind.config.js")]
+              plugins: [require('tailwindcss')('./cemiyet-tailwind.config.js')]
             }
           }
         ]

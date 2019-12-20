@@ -1,123 +1,16 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
   "projects": {
-    "core": {
-      "projectType": "library",
-      "root": "projects/core",
-      "sourceRoot": "projects/core/src",
-      "prefix": "cemiyet-core",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/core/tsconfig.lib.json",
-            "project": "projects/core/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/core/src/test.ts",
-            "tsConfig": "projects/core/tsconfig.spec.json",
-            "karmaConfig": "projects/core/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/core/tsconfig.lib.json",
-              "projects/core/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "components": {
-      "projectType": "library",
-      "root": "projects/components",
-      "sourceRoot": "projects/components/src",
-      "prefix": "cemiyet-components",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/components/tsconfig.lib.json",
-            "project": "projects/components/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/components/src/test.ts",
-            "tsConfig": "projects/components/tsconfig.spec.json",
-            "karmaConfig": "projects/components/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/components/tsconfig.lib.json",
-              "projects/components/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "api": {
-      "projectType": "library",
-      "root": "projects/api",
-      "sourceRoot": "projects/api/src",
-      "prefix": "cemiyet-api",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/api/tsconfig.lib.json",
-            "project": "projects/api/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/api/src/test.ts",
-            "tsConfig": "projects/api/tsconfig.spec.json",
-            "karmaConfig": "projects/api/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/api/tsconfig.lib.json",
-              "projects/api/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "web": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
+        "@nrwl/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/web",
-      "sourceRoot": "projects/web/src",
-      "prefix": "cemiyet-web",
+      "root": "apps/web",
+      "sourceRoot": "apps/web/src",
+      "prefix": "cemiyet",
       "architect": {
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
@@ -125,27 +18,22 @@
             "customWebpackConfig": {
               "path": "./cemiyet-webpack.config.js"
             },
-            "outputPath": "dist/web",
-            "index": "projects/web/src/index.html",
-            "main": "projects/web/src/main.ts",
-            "polyfills": "projects/web/src/polyfills.ts",
-            "tsConfig": "projects/web/tsconfig.app.json",
+            "outputPath": "dist/apps/web",
+            "index": "apps/web/src/index.html",
+            "main": "apps/web/src/main.ts",
+            "polyfills": "apps/web/src/polyfills.ts",
+            "tsConfig": "apps/web/tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "projects/web/src/favicon.ico",
-              "projects/web/src/assets"
-            ],
-            "styles": [
-              "projects/web/src/styles.scss"
-            ],
+            "assets": ["apps/web/src/favicon.ico", "apps/web/src/assets"],
+            "styles": ["apps/web/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/web/src/environments/environment.ts",
-                  "with": "projects/web/src/environments/environment.prod.ts"
+                  "replace": "apps/web/src/environments/environment.ts",
+                  "with": "apps/web/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -189,40 +77,36 @@
             "browserTarget": "web:build"
           }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/web/src/test.ts",
-            "polyfills": "projects/web/src/polyfills.ts",
-            "tsConfig": "projects/web/tsconfig.spec.json",
-            "karmaConfig": "projects/web/karma.conf.js",
-            "assets": [
-              "projects/web/src/favicon.ico",
-              "projects/web/src/assets"
-            ],
-            "styles": [
-              "projects/web/src/styles.scss"
-            ],
-            "scripts": []
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/web/tsconfig.app.json",
-              "projects/web/tsconfig.spec.json",
-              "projects/web/e2e/tsconfig.json"
+              "apps/web/tsconfig.app.json",
+              "apps/web/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/web/**"]
           }
         },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+        "test": {
+          "builder": "@nrwl/jest:jest",
           "options": {
-            "protractorConfig": "projects/web/e2e/protractor.conf.js",
+            "jestConfig": "apps/web/jest.config.js",
+            "tsConfig": "apps/web/tsconfig.spec.json",
+            "setupFile": "apps/web/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "web-e2e": {
+      "root": "apps/web-e2e",
+      "sourceRoot": "apps/web-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/web-e2e/cypress.json",
+            "tsConfig": "apps/web-e2e/tsconfig.e2e.json",
             "devServerTarget": "web:serve"
           },
           "configurations": {
@@ -230,8 +114,83 @@
               "devServerTarget": "web:serve:production"
             }
           }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/web-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/web-e2e/**"]
+          }
         }
       }
+    },
+    "core": {
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/tsconfig.lib.json",
+              "libs/core/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
+            "tsConfig": "libs/core/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "components": {
+      "projectType": "library",
+      "root": "libs/components",
+      "sourceRoot": "libs/components/src",
+      "prefix": "cemiyet",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/components/tsconfig.lib.json",
+              "libs/components/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/components/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/components/jest.config.js",
+            "tsConfig": "libs/components/tsconfig.spec.json",
+            "setupFile": "libs/components/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
     }
   },
   "defaultProject": "web"
