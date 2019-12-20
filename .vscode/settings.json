@@ -1,0 +1,24 @@
+{
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}Cemiyet",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "*.lock": true,
+    "package-lock.json": true,
+    "node_modules/": true,
+    "dist/": true,
+    "img/": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+}

@@ -1,18 +1,21 @@
 <h1 align="center">
   <br>
-  <img src="logo.svg" alt="Cemiyet">
+  <img src="img/logo.svg" alt="Cemiyet">
   <br>
   <br>
   <br>
 </h1>
 
+<h1 align="center">
+  <img src="img/landing-page.png" alt="Cemiyet Landing Page">
+</h1>
+
 > Cemiyet Frontend Repository
 
-Consists of 3 projects;
-- [Core](projects/core): provides types.
-- [Components](projects/components): provides angular components.
-- [Api](projects/api): provides backend communication service and entity types.
-- [Web](projects/web): combines everything to create beautiful presentation. 
+Consists of 5 projects;
 
-
-<img src="landing-page.png" alt="Cemiyet Landing Page">
+- [Core](libs/core): provides types.
+- [Components](libs/components): provides angular components.
+- [Api](libs/api): provides backend communication service and entity types.
+- [Web-e2e](apps/web-e2e): e2e tests of web application.
+- [Web](apps/web): combines everything to create beautiful presentation.
