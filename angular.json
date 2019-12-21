@@ -16,7 +16,7 @@
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
-              "path": "./cemiyet-webpack.config.js"
+              "path": "./webpack.config.js"
             },
             "outputPath": "dist/apps/web",
             "index": "apps/web/src/index.html",
