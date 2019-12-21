@@ -1,5 +1,7 @@
 {
   "recommendations": [
-    "johnpapa.angular-essentials"
+    "johnpapa.angular-essentials",
+    "bradlc.vscode-tailwindcss",
+    "thibaudcolas.stylelint"
   ]
 }
