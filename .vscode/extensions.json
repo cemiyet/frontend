@@ -1,7 +1,14 @@
 {
   "recommendations": [
-    "johnpapa.angular-essentials",
+    "angular.ng-template",
     "bradlc.vscode-tailwindcss",
+    "editorconfig.editorconfig",
+    "eg2.vscode-npm-script",
+    "esbenp.prettier-vscode",
+    "johnpapa.angular2",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "natewallace.angular2-inline",
+    "nrwl.angular-console",
     "thibaudcolas.stylelint"
   ]
 }
