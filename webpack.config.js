@@ -7,7 +7,7 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: [require('tailwindcss')('./cemiyet-tailwind.config.js')]
+              plugins: [require('tailwindcss')('./tailwind.config.js')]
             }
           }
         ]
