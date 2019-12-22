@@ -1,0 +1,23 @@
+.input-label {
+  @apply block mb-2 tracking-wide text-xs font-bold;
+}
+
+.input-with-icon {
+  @apply relative flex content-center items-center;
+}
+
+.input-icon {
+  @apply absolute;
+}
+
+.input-error {
+  @apply my-3 italic text-red-500 text-xs;
+}
+
+.cemiyet-input {
+  @apply w-full py-2 px-3 rounded leading-tight;
+
+  &:focus {
+    @apply outline-none shadow-outline bg-teal-900;
+  }
+}

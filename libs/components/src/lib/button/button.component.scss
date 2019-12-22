@@ -1,0 +1,7 @@
+.cemiyet-button {
+  @apply px-5 py-1 rounded-lg font-normal;
+
+  &:hover {
+    @apply shadow-outline;
+  }
+}
