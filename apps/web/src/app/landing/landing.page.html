@@ -2,11 +2,23 @@
   <header>
     <cemiyet-logo sideLength="50"></cemiyet-logo>
 
-    <cemiyet-text-input class="w-full mx-6 md:max-w-xl" id="search" placeholder="Keşfetmeye Başla..."
-      textAlignment="center" icon="search" iconColor="kournikova" iconLocation="left"></cemiyet-text-input>
+    <cemiyet-text-input
+      class="w-full mx-6 md:max-w-xl"
+      id="search"
+      placeholder="Keşfetmeye Başla..."
+      textAlignment="center"
+      icon="search"
+      iconColor="kournikova"
+      iconLocation="left"
+    ></cemiyet-text-input>
 
-    <cemiyet-button text="Giriş" bgColor="kournikova" textColor="toledo" fontSize="l"
-      (click)="onLogin($event)"></cemiyet-button>
+    <cemiyet-button
+      text="Giriş"
+      bgColor="kournikova"
+      textColor="toledo"
+      fontSize="l"
+      (click)="onLogin($event)"
+    ></cemiyet-button>
   </header>
 
   <article>
@@ -16,67 +28,86 @@
       </div>
 
       <form class="w-full max-w-lg py-3">
-
-        <div class="flex flex-wrap -mx-3 my-6">
-
-          <div class="w-full md:w-2/5 px-3 mb-6 md:mb-0">
-            <cemiyet-text-input label="İsminiz" id="name" error="İsminizi girmediniz.">
-            </cemiyet-text-input>
+        <div class="flex flex-wrap my-6 -mx-3">
+          <div class="w-full px-3 mb-6 md:w-2/5 md:mb-0">
+            <cemiyet-text-input
+              label="İsminiz"
+              id="name"
+              error="İsminizi girmediniz."
+            ></cemiyet-text-input>
           </div>
 
-          <div class="w-full md:w-3/5 px-3">
-            <cemiyet-text-input label="Soyisminiz" id="surname" error="Soyisminizi girmediniz.">
-            </cemiyet-text-input>
+          <div class="w-full px-3 md:w-3/5">
+            <cemiyet-text-input
+              label="Soyisminiz"
+              id="surname"
+              error="Soyisminizi girmediniz."
+            ></cemiyet-text-input>
           </div>
-
         </div>
 
         <div class="w-full mb-6">
-          <cemiyet-text-input id="email" type="email" label="E-posta Adresiniz"
-            error="E-posta adresinizi girmediniz.">
-          </cemiyet-text-input>
+          <cemiyet-text-input
+            id="email"
+            type="email"
+            label="E-posta Adresiniz"
+            error="E-posta adresinizi girmediniz."
+          ></cemiyet-text-input>
         </div>
 
         <div class="w-full mb-6">
-          <cemiyet-text-input id="password" type="password" label="Parolanız" error="İsminizi girmediniz.">
-          </cemiyet-text-input>
+          <cemiyet-text-input
+            id="password"
+            type="password"
+            label="Parolanız"
+            error="İsminizi girmediniz."
+          ></cemiyet-text-input>
         </div>
 
-        <div class="flex flex-wrap -mx-3 mb-6">
-
-          <div class="w-full md:w-3/5 px-3 mb-6 md:mb-0">
-            <cemiyet-text-input id="username" label="Kullanıcı Adınız" error="Kullanıcı adınızı girmediniz.">
-            </cemiyet-text-input>
+        <div class="flex flex-wrap mb-6 -mx-3">
+          <div class="w-full px-3 mb-6 md:w-3/5 md:mb-0">
+            <cemiyet-text-input
+              id="username"
+              label="Kullanıcı Adınız"
+              error="Kullanıcı adınızı girmediniz."
+            ></cemiyet-text-input>
           </div>
 
-          <div class="w-full md:w-2/5 px-3">
-            <cemiyet-text-input id="birthDate" type="date" label="Doğum Tarihiniz"
-              error="Doğum tarihinizi girmediniz.">
-            </cemiyet-text-input>
+          <div class="w-full px-3 md:w-2/5">
+            <cemiyet-text-input
+              id="birthDate"
+              type="date"
+              label="Doğum Tarihiniz"
+              error="Doğum tarihinizi girmediniz."
+            ></cemiyet-text-input>
           </div>
-
         </div>
 
         <div class="flex items-center justify-start w-full my-3">
           <input type="checkbox" id="agreed" />
-          <p class="text-kournikova pl-2">
-            <a href="#" class="text-gulf-stream border-dotted border-b-2 border-gulf-stream">Kullanım şartları</a>nı
-            okudum, kabul ediyorum.
+          <p class="pl-2 text-kournikova">
+            <a href="#" class="border-b-2 border-dotted text-gulf-stream border-gulf-stream"
+              >Kullanım şartları</a
+            >nı okudum, kabul ediyorum.
           </p>
         </div>
 
         <div class="flex justify-center w-full mt-6">
-          <cemiyet-button text="Kayıt Ol" bgColor="aquamarine" textColor="toledo" fontSize="l"
-            (click)="onRegister($event)">
-          </cemiyet-button>
+          <cemiyet-button
+            text="Kayıt Ol"
+            bgColor="aquamarine"
+            textColor="toledo"
+            fontSize="l"
+            (click)="onRegister($event)"
+          ></cemiyet-button>
         </div>
-
       </form>
-
     </div>
     <div class="illustration">
-      <cemiyet-illustration fileName="undraw_book_lover_mkck.svg" creator="Katerina Limpitsouni">
-      </cemiyet-illustration>
+      <cemiyet-illustration
+        fileName="undraw_book_lover_mkck.svg"
+        creator="Katerina Limpitsouni"
+      ></cemiyet-illustration>
     </div>
   </article>
 </div>
