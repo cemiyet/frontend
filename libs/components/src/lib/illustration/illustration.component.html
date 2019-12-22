@@ -1,10 +1,14 @@
-<img src="assets/illustrations/{{fileName}}" alt="Illustration by {{creator}}">
+<img src="assets/illustrations/{{ fileName }}" alt="Illustration by {{ creator }}" />
 
 <div *ngIf="creator && creatorLink">
-  <p class="mt-12 text-center text-xs text-{{textColor}}">Illustration by
-    <a *ngIf="creatorLink" class="border-b-2 border-dotted border-{{borderColor}}" [attr.href]="creatorLink"
-      target="_blank">
-      {{creator}}
+  <p class="illustration-credits text-{{ textColor }}">
+    Illustration by
+    <a
+      *ngIf="creatorLink"
+      [attr.href]="creatorLink"
+      class="creator-link border-{{ borderColor }}"
+      target="_blank"
+      >{{ creator }}
     </a>
   </p>
 </div>
