@@ -119,3 +119,14 @@ type CemiyetColorPalette =
   | 'white-linen';
 
 export type Color = DefaultColorPalette | CemiyetColorPalette;
+
+export enum COLOR_VARIANT {
+  LIGHT = 'white-linen',
+  DARK = 'space-shuttle',
+  PRIMARY = 'kournikova',
+  SECONDARY = 'aquamarine',
+  SUCCESS = 'green-500',
+  INFO = 'blue-500',
+  WARNING = 'orange-500',
+  DANGER = 'red-500'
+}

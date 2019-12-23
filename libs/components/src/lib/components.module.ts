@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { ElementsModule } from './elements/elements.module';
+
 import { IconLocationDirective } from './icon-location/icon-location.directive';
 
 import { ButtonComponent } from './button/button.component';
@@ -9,7 +11,7 @@ import { IllustrationComponent } from './illustration/illustration.component';
 import { TextInputComponent } from './text-input/text-input.component';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, ElementsModule],
   declarations: [
     IconLocationDirective,
     ButtonComponent,
@@ -18,6 +20,7 @@ import { TextInputComponent } from './text-input/text-input.component';
     TextInputComponent
   ],
   exports: [
+    ElementsModule,
     IconLocationDirective,
     ButtonComponent,
     LogoComponent,
