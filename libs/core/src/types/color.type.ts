@@ -120,13 +120,15 @@ type CemiyetColorPalette =
 
 export type Color = DefaultColorPalette | CemiyetColorPalette;
 
-export enum COLOR_VARIANT {
-  LIGHT = 'white-linen',
-  DARK = 'space-shuttle',
-  PRIMARY = 'kournikova',
-  SECONDARY = 'aquamarine',
-  SUCCESS = 'green-500',
-  INFO = 'blue-500',
-  WARNING = 'orange-500',
-  DANGER = 'red-500'
-}
+export const COLOR_VARIANTS = {
+  LIGHT: 'white-linen',
+  DARK: 'space-shuttle',
+  PRIMARY: 'kournikova',
+  SECONDARY: 'aquamarine',
+  SUCCESS: 'green-500',
+  INFO: 'blue-500',
+  WARNING: 'orange-500',
+  DANGER: 'red-500'
+};
+
+export type ColorVariant = keyof typeof COLOR_VARIANTS;
