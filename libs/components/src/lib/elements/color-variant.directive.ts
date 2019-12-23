@@ -1,20 +1,24 @@
 import { Directive, Input, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
 
-import { COLOR_VARIANT } from '@cemiyet/core';
+import { ColorVariant, COLOR_VARIANTS } from '@cemiyet/core';
 
 @Directive({
   selector: '[cemiyetColorVariant]'
 })
 export class ColorVariantDirective implements AfterViewInit {
-  @Input('cemiyetColorVariant') variant: COLOR_VARIANT;
+  @Input('cemiyetColorVariant') variant: ColorVariant;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngAfterViewInit() {
+    let className: string;
+
     switch (this.el.nativeElement.localName) {
       case 'i':
-        this.renderer.addClass(this.el.nativeElement, 'text-' + this.variant);
+        className = 'text-' + COLOR_VARIANTS[this.variant];
         break;
     }
+
+    this.renderer.addClass(this.el.nativeElement, className);
   }
 }
