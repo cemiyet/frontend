@@ -14,13 +14,10 @@
   },
   "private": true,
   "scripts": {
-    "clean": "rimraf ./dist",
     "ng": "ng",
     "nx": "nx",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --prod",
-    "build:ci": "npm run clean && npm run test && npm run build:prod",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
