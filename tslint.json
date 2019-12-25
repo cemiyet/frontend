@@ -72,9 +72,7 @@
       true,
       {
         "limit": 100,
-        "ignore-pattern": "^import |^export {(.*?)}",
-        "check-strings": true,
-        "check-regex": true
+        "ignore-pattern": "^import |^export {(.*?)}"
       }
     ],
     "quotemark": [true, "single", "avoid-escape", "avoid-template"]
