@@ -1,6 +1,6 @@
 import { Directive, Input, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
 
-import { ColorVariant} from '@cemiyet/core';
+import { ColorVariant } from '@cemiyet/core';
 
 @Directive({
   selector: '[cemiyetColorVariant]'
