@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { Icon, ColorVariant } from '@cemiyet/core';
 
@@ -7,9 +7,14 @@ import { Icon, ColorVariant } from '@cemiyet/core';
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss']
 })
-export class IconComponent {
+export class IconComponent implements OnInit {
   @Input() icon: Icon;
   @Input() variant: ColorVariant;
 
   constructor() {}
+
+  ngOnInit() {
+    if (!this.icon) throw new Error('Icon type must be provided!');
+    if (!this.variant) throw new Error('Color variant must be provided!');
+  }
 }
