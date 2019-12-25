@@ -33,15 +33,15 @@
     @apply text-green-500;
   }
 
+  &.danger {
+    @apply text-red-500;
+  }
+
   &.info {
     @apply text-blue-500;
   }
 
   &.warning {
     @apply text-orange-500;
-  }
-
-  &.danger {
-    @apply text-red-500;
   }
 }
