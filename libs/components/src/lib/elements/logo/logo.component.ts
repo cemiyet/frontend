@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ColorVariant } from '@cemiyet/core';
 
 @Component({
   selector: 'cemiyet-logo',
@@ -7,9 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LogoComponent implements OnInit {
   @Input() sideLength: number;
-  @Input() borderRadius: number;
+  @Input() borderRadius?: number;
+  @Input() variant: ColorVariant = 'PRIMARY';
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (!this.sideLength) throw new Error('Side length type must be provided!');
+  }
 }
