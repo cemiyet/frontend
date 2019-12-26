@@ -12,13 +12,7 @@
       iconLocation="left"
     ></cemiyet-text-input>
 
-    <cemiyet-button
-      text="Giriş"
-      bgColor="kournikova"
-      textColor="toledo"
-      fontSize="l"
-      (click)="onLogin($event)"
-    ></cemiyet-button>
+    <cemiyet-button text="Giriş" variant="PRIMARY" (click)="onLogin($event)"></cemiyet-button>
   </header>
 
   <article>
@@ -95,9 +89,7 @@
         <div class="flex justify-center w-full mt-6">
           <cemiyet-button
             text="Kayıt Ol"
-            bgColor="aquamarine"
-            textColor="toledo"
-            fontSize="l"
+            variant="SECONDARY"
             (click)="onRegister($event)"
           ></cemiyet-button>
         </div>
