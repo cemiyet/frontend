@@ -7,34 +7,66 @@
 
   &.light {
     @apply border-white-linen bg-white-linen text-toledo;
+
+    &:active {
+      @apply bg-gray-400 text-toledo;
+    }
   }
 
   &.dark {
     @apply border-space-shuttle bg-space-shuttle text-white-linen;
+
+    &:active {
+      @apply bg-eclipse text-white-linen;
+    }
   }
 
   &.primary {
     @apply border-kournikova bg-kournikova text-toledo;
+
+    &:active {
+      @apply bg-turbo text-toledo;
+    }
   }
 
   &.secondary {
     @apply border-aquamarine bg-aquamarine text-toledo;
+
+    &:active {
+      @apply bg-teal-400 text-toledo;
+    }
   }
 
   &.success {
     @apply border-green-500 bg-green-500 text-white-linen;
+
+    &:active {
+      @apply bg-green-600 text-white-linen;
+    }
   }
 
   &.danger {
     @apply border-red-500 bg-red-500 text-white-linen;
+
+    &:active {
+      @apply bg-red-600 text-white-linen;
+    }
   }
 
   &.info {
     @apply border-blue-500 bg-blue-500 text-white-linen;
+
+    &:active {
+      @apply bg-blue-600 text-white-linen;
+    }
   }
 
   &.warning {
     @apply border-orange-500 bg-orange-500 text-white-linen;
+
+    &:active {
+      @apply bg-orange-600 text-white-linen;
+    }
   }
 
   &.outline {
@@ -46,6 +78,10 @@
       &:hover {
         @apply bg-white-linen text-toledo;
       }
+
+      &:active {
+        @apply bg-gray-400 text-toledo;
+      }
     }
 
     &.dark {
@@ -53,6 +89,10 @@
 
       &:hover {
         @apply bg-space-shuttle text-white-linen;
+      }
+
+      &:active {
+        @apply bg-eclipse text-white-linen;
       }
     }
 
@@ -62,6 +102,10 @@
       &:hover {
         @apply bg-kournikova text-toledo;
       }
+
+      &:active {
+        @apply bg-turbo text-toledo;
+      }
     }
 
     &.secondary {
@@ -69,6 +113,10 @@
 
       &:hover {
         @apply bg-aquamarine text-toledo;
+      }
+
+      &:active {
+        @apply bg-teal-400 text-toledo;
       }
     }
 
@@ -78,6 +126,10 @@
       &:hover {
         @apply bg-green-500 text-white-linen;
       }
+
+      &:active {
+        @apply bg-green-600 text-white-linen;
+      }
     }
 
     &.danger {
@@ -85,6 +137,10 @@
 
       &:hover {
         @apply bg-red-500 text-white-linen;
+      }
+
+      &:active {
+        @apply bg-red-600 text-white-linen;
       }
     }
 
@@ -94,6 +150,10 @@
       &:hover {
         @apply bg-blue-500 text-white-linen;
       }
+
+      &:active {
+        @apply bg-blue-600 text-white-linen;
+      }
     }
 
     &.warning {
@@ -101,6 +161,10 @@
 
       &:hover {
         @apply bg-orange-500 text-white-linen;
+      }
+
+      &:active {
+        @apply bg-orange-600 text-white-linen;
       }
     }
   }
