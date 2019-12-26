@@ -1,39 +1,107 @@
-.cemiyet-button {
-  @apply px-5 py-1 rounded-lg font-normal;
+.c-button {
+  @apply px-5 py-1 rounded-lg font-normal border-2;
 
-  &:hover {
-    @apply shadow-outline;
+  &:focus {
+    @apply outline-none;
   }
 
   &.light {
-    @apply bg-white-linen text-toledo;
+    @apply border-white-linen bg-white-linen text-toledo;
   }
 
   &.dark {
-    @apply bg-space-shuttle text-white-linen;
+    @apply border-space-shuttle bg-space-shuttle text-white-linen;
   }
 
   &.primary {
-    @apply bg-kournikova text-toledo;
+    @apply border-kournikova bg-kournikova text-toledo;
   }
 
   &.secondary {
-    @apply bg-aquamarine text-toledo;
+    @apply border-aquamarine bg-aquamarine text-toledo;
   }
 
   &.success {
-    @apply bg-green-500 text-white-linen;
+    @apply border-green-500 bg-green-500 text-white-linen;
   }
 
   &.danger {
-    @apply bg-red-500 text-white-linen;
+    @apply border-red-500 bg-red-500 text-white-linen;
   }
 
   &.info {
-    @apply bg-blue-500 text-white-linen;
+    @apply border-blue-500 bg-blue-500 text-white-linen;
   }
 
   &.warning {
-    @apply bg-orange-500 text-white-linen;
+    @apply border-orange-500 bg-orange-500 text-white-linen;
+  }
+
+  &.outline {
+    @apply bg-transparent;
+
+    &.light {
+      @apply text-white-linen;
+
+      &:hover {
+        @apply bg-white-linen text-toledo;
+      }
+    }
+
+    &.dark {
+      @apply text-space-shuttle;
+
+      &:hover {
+        @apply bg-space-shuttle text-white-linen;
+      }
+    }
+
+    &.primary {
+      @apply text-kournikova;
+
+      &:hover {
+        @apply bg-kournikova text-toledo;
+      }
+    }
+
+    &.secondary {
+      @apply text-aquamarine;
+
+      &:hover {
+        @apply bg-aquamarine text-toledo;
+      }
+    }
+
+    &.success {
+      @apply text-green-500;
+
+      &:hover {
+        @apply bg-green-500 text-white-linen;
+      }
+    }
+
+    &.danger {
+      @apply text-red-500;
+
+      &:hover {
+        @apply bg-red-500 text-white-linen;
+      }
+    }
+
+    &.info {
+      @apply text-blue-500;
+
+      &:hover {
+        @apply bg-blue-500 text-white-linen;
+      }
+    }
+
+    &.warning {
+      @apply text-orange-500;
+
+      &:hover {
+        @apply bg-orange-500 text-white-linen;
+      }
+    }
   }
 }
