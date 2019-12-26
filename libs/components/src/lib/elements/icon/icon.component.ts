@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Icon, ColorVariant } from '@cemiyet/core';
+import { Icon, ColorVariant, FontSize } from '@cemiyet/core';
 
 @Component({
   selector: 'cemiyet-icon',
@@ -10,6 +10,7 @@ import { Icon, ColorVariant } from '@cemiyet/core';
 export class IconComponent implements OnInit {
   @Input() icon: Icon;
   @Input() variant: ColorVariant;
+  @Input() size: FontSize = 'base';
 
   constructor() {}
 
