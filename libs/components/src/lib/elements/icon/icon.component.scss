@@ -1,3 +1,5 @@
+@import '../../shared/_variables.scss';
+
 .c-icon {
   @apply inline-block;
   @apply font-normal;
@@ -13,35 +15,9 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 
-  &.light {
-    @apply text-white-linen;
-  }
-
-  &.dark {
-    @apply text-space-shuttle;
-  }
-
-  &.primary {
-    @apply text-kournikova;
-  }
-
-  &.secondary {
-    @apply text-aquamarine;
-  }
-
-  &.success {
-    @apply text-green-500;
-  }
-
-  &.danger {
-    @apply text-red-500;
-  }
-
-  &.info {
-    @apply text-blue-500;
-  }
-
-  &.warning {
-    @apply text-orange-500;
+  @each $color, $value in $theme-colors {
+    &.#{$color} {
+      color: map-get($value, 'bg');
+    }
   }
 }
