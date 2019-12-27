@@ -1,75 +1,25 @@
+@import '../../shared/_variables.scss';
+
 .c-logo {
   @apply inline-block;
 
   rect {
     @apply w-full h-full fill-current;
 
-    &.light {
-      @apply text-white-linen;
-    }
-
-    &.dark {
-      @apply text-space-shuttle;
-    }
-
-    &.primary {
-      @apply text-kournikova;
-    }
-
-    &.secondary {
-      @apply text-aquamarine;
-    }
-
-    &.success {
-      @apply text-green-500;
-    }
-
-    &.danger {
-      @apply text-red-500;
-    }
-
-    &.info {
-      @apply text-blue-500;
-    }
-
-    &.warning {
-      @apply text-orange-500;
+    @each $color, $value in $theme-colors {
+      &.#{$color} {
+        color: map-get($value, 'bg');
+      }
     }
   }
 
   text {
     @apply fill-current font-serif font-light;
 
-    &.light {
-      @apply text-toledo;
-    }
-
-    &.dark {
-      @apply text-white-linen;
-    }
-
-    &.primary {
-      @apply text-toledo;
-    }
-
-    &.secondary {
-      @apply text-toledo;
-    }
-
-    &.success {
-      @apply text-white-linen;
-    }
-
-    &.danger {
-      @apply text-white-linen;
-    }
-
-    &.info {
-      @apply text-white-linen;
-    }
-
-    &.warning {
-      @apply text-white-linen;
+    @each $color, $value in $theme-colors {
+      &.#{$color} {
+        color: map-get($value, 'fg');
+      }
     }
   }
 }
