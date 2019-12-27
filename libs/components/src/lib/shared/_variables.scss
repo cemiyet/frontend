@@ -1,0 +1,58 @@
+$light: (
+  'bg': theme('colors.white-linen'),
+  'fg': theme('colors.toledo'),
+  'bg-active': theme('colors.gray.400')
+) !default;
+
+$dark: (
+  'bg': theme('colors.space-shuttle'),
+  'fg': theme('colors.white-linen'),
+  'bg-active': theme('colors.eclipse')
+) !default;
+
+$primary: (
+  'bg': theme('colors.kournikova'),
+  'fg': theme('colors.toledo'),
+  'bg-active': theme('colors.turbo')
+) !default;
+
+$secondary: (
+  'bg': theme('colors.aquamarine'),
+  'fg': theme('colors.toledo'),
+  'bg-active': theme('colors.teal.400')
+) !default;
+
+$success: (
+  'bg': theme('colors.green.500'),
+  'fg': theme('colors.white-linen'),
+  'bg-active': theme('colors.green.600')
+) !default;
+
+$info: (
+  'bg': theme('colors.blue.500'),
+  'fg': theme('colors.white-linen'),
+  'bg-active': theme('colors.blue.600')
+) !default;
+
+$warning: (
+  'bg': theme('colors.orange.500'),
+  'fg': theme('colors.white-linen'),
+  'bg-active': theme('colors.orange.600')
+) !default;
+
+$danger: (
+  'bg': theme('colors.red.500'),
+  'fg': theme('colors.white-linen'),
+  'bg-active': theme('colors.red.600')
+) !default;
+
+$theme-colors: (
+  'light': $light,
+  'dark': $dark,
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger
+);
