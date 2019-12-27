@@ -16,7 +16,7 @@
     [placeholder]="placeholder"
     class="cemiyet-input focus:placeholder-transparent
     text-{{ textAlignment }} text-{{ textColor }} placeholder-{{ textColor }} bg-{{ bgColor }}"
-    [cemiyetIconLocation]="iconLocation"
+    [attr.cemiyetIconLocation]="iconLocation"
     [ngClass]="{ 'border border-red-500': hasError }"
   />
   <ng-container *ngTemplateOutlet="errorText"></ng-container>
@@ -27,7 +27,7 @@
 </ng-template>
 
 <ng-template #inputIcon>
-  <i class="input-icon material-icons text-{{ iconColor }}" [cemiyetIconLocation]="iconLocation">
+  <i class="input-icon material-icons text-{{ iconColor }}" [attr.cemiyetIconLocation]="iconLocation">
     {{ icon }}
   </i>
 </ng-template>

@@ -15,6 +15,10 @@ describe('LogoComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LogoComponent);
     component = fixture.componentInstance;
+
+    component.sideLength = 50;
+    component.variant = 'DANGER';
+
     fixture.detectChanges();
   });
 

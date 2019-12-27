@@ -8,14 +8,18 @@ describe('IconComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IconComponent ]
-    })
-    .compileComponents();
+      declarations: [IconComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(IconComponent);
     component = fixture.componentInstance;
+
+    component.icon = '3d_rotation';
+    component.variant = 'PRIMARY';
+    component.size = 'base';
+
     fixture.detectChanges();
   });
 
