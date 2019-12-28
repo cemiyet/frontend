@@ -16,13 +16,18 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build
+    - name: Install Dependencies and Build
       run: |
         npm i
         npm run build --if-present
-    - name: npm test
+    - name: Test with Coverage
       run: |
-        npm run test --silent
+        npm i
+        npm run test --silent --code-coverage --json --output-file coverage/coverage.json
+    - uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: coverage/coverage.json
       env:
         CI: true
 
