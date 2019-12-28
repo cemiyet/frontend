@@ -1,11 +1,4 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  ViewChild,
-  AfterViewInit,
-  ElementRef
-} from '@angular/core';
+import { Component, OnInit, Input, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 
 import { Color, TextAlignment } from '@cemiyet/core';
 
@@ -36,11 +29,9 @@ export class TextInputComponent implements OnInit, AfterViewInit {
   @ViewChild('inputIcon', { static: false })
   inputIcon: ElementRef<HTMLElement>;
 
-  ngAfterViewInit() {
-    console.log(this.inputIcon);
-  }
-
   constructor() {}
 
   ngOnInit() {}
+
+  ngAfterViewInit() {}
 }
