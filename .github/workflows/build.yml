@@ -7,7 +7,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [macOS-latest, windows-2019]
+        os: [windows-2019]
         node-version: [12.x]
 
     steps:
@@ -34,12 +34,4 @@ jobs:
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         file: ./coverage/*.json
-
-    - name: Send Coverage Reports to CodeClimate
-      uses: paambaati/codeclimate-action@v2.3.0
-      env:
-        CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_TOKEN }}
-      with:
-        coverageCommand: yarn run test --silent --json
-        debug: true
 
