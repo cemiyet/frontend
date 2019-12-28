@@ -4,12 +4,12 @@
   [attr.height]="sideLength"
   class="c-logo"
 >
-  <rect [attr.rx]="borderRadius ? borderRadius : sideLength / 10" [attr.cemiyetColorVariant]="variant" />
+  <rect [attr.rx]="borderRadius ? borderRadius : sideLength / 10" [cemiyetColorVariant]="variant" />
 
   <text
     [attr.x]="sideLength / 5"
     [attr.y]="(375 * sideLength) / 500"
-    [attr.cemiyetColorVariant]="variant"
+    [cemiyetColorVariant]="variant"
   >
     <tspan [attr.font-size]="sideLength / 22 + 'rem'">C.</tspan>
   </text>
