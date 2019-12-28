@@ -12,6 +12,8 @@
 
 > Cemiyet Frontend Repository
 
+[![codecov](https://codecov.io/gh/nuriu/cemiyet-frontend/branch/develop/graph/badge.svg)](https://codecov.io/gh/nuriu/cemiyet-frontend)
+
 Consists of 5 projects;
 
 - [Core](libs/core): provides types.
