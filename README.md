@@ -12,6 +12,7 @@
 
 > Cemiyet Frontend Repository
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/c4773773fb2b81498a0a/maintainability)](https://codeclimate.com/github/nuriu/cemiyet-frontend/maintainability)
 [![codecov](https://codecov.io/gh/nuriu/cemiyet-frontend/branch/develop/graph/badge.svg)](https://codecov.io/gh/nuriu/cemiyet-frontend)
 
 Consists of 5 projects;
