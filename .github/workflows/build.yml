@@ -23,7 +23,7 @@ jobs:
     - name: Test with Coverage Output
       run: |
         npm i
-        npm run test --silent --code-coverage --json --output-file coverage/coverage.json
+        npm run test --silent --coverage --json
     - name: Codecov
       uses: codecov/codecov-action@v1.0.5
       with:
