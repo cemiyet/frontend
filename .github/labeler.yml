@@ -1,0 +1,12 @@
+Status%3A%20Backlog:
+  - ./*
+
+Project%3A%20Web:
+  - apps/web/*
+  - apps/web-e2e/*
+
+Project%3A%20Core:
+  - libs/core/*
+
+Project%3A%20Components:
+  - libs/components/*
