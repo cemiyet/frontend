@@ -1,12 +1,22 @@
 language: node_js
 node_js:
-  - "12.0"
+  - '12.0'
+cache: yarn
+
 branches:
   only:
     - develop
+
 before_script:
-  - npm install -g @angular/cli
+  - yarn global add nyc
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build --debug
+
 script:
-  - npm install
-  - npm run build
-  - npm run test --silent
+  - yarn
+  - yarn run build
+  - nyc --reporter=lcov yarn run test --silent --coverage
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
