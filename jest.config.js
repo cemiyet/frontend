@@ -5,6 +5,9 @@ module.exports = {
   },
   resolver: '@nrwl/jest/plugins/resolver',
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageReporters: ['html', 'text'],
+  collectCoverage: true,
+  coverageReporters: ['text', 'json'],
+  coverageDirectory: './coverage',
+  outputFile: './coverage/coverage.json',
   passWithNoTests: true
 };
