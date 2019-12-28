@@ -20,14 +20,15 @@ jobs:
       run: |
         npm i
         npm run build --if-present
-    - name: Test with Coverage
+    - name: Test with Coverage Output
       run: |
         npm i
         npm run test --silent --code-coverage --json --output-file coverage/coverage.json
-    - uses: codecov/codecov-action@v1
+    - name: Codecov
+      uses: codecov/codecov-action@v1.0.5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        file: coverage/coverage.json
+        file: ./coverage/coverage.json
       env:
         CI: true
 
