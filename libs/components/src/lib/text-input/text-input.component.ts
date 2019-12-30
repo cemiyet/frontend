@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 
-import { Color, TextAlignment } from '@cemiyet/core';
+import { Color, Icon, TextAlignment } from '@cemiyet/core';
 
 @Component({
   selector: 'cemiyet-text-input',
@@ -16,8 +16,7 @@ export class TextInputComponent implements OnInit, AfterViewInit {
   @Input() textColor: Color = 'kournikova';
   @Input() textAlignment: TextAlignment = 'left';
 
-  @Input() icon: string;
-  @Input() iconColor: Color = 'white-linen';
+  @Input() icon: Icon;
   @Input() iconLocation: 'left' | 'right';
 
   @Input() label: string;
