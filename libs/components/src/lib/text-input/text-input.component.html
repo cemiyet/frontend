@@ -1,4 +1,4 @@
-<div *ngIf="icon" class="input-with-icon">
+<div *ngIf="icon" class="input-with-icon" [cemiyetIconLocation]="iconLocation">
   <ng-container *ngTemplateOutlet="inputIcon"></ng-container>
   <ng-container *ngTemplateOutlet="input"></ng-container>
 </div>
@@ -16,7 +16,6 @@
     [placeholder]="placeholder"
     class="c-input focus:placeholder-transparent
     text-{{ textAlignment }} text-{{ textColor }} placeholder-{{ textColor }} bg-{{ bgColor }}"
-    [cemiyetIconLocation]="iconLocation"
     [ngClass]="{ 'border border-red-500': hasError }"
   />
   <ng-container *ngTemplateOutlet="errorText"></ng-container>

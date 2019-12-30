@@ -5,6 +5,26 @@
 .input-with-icon {
   @apply relative flex items-center;
 
+  &.has-icon-left {
+    cemiyet-icon {
+      @apply left-0 pl-2;
+    }
+
+    .c-input {
+      @apply pl-10;
+    }
+  }
+
+  &.has-icon-right {
+    cemiyet-icon {
+      @apply right-0 pr-2;
+    }
+
+    .c-input {
+      @apply pr-10;
+    }
+  }
+
   cemiyet-icon {
     @apply absolute inline-flex;
   }

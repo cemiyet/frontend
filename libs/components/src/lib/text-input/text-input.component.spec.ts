@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-// TODO: icon location directive should moved to shared module.
-import { IconLocationDirective } from '../icon-location/icon-location.directive';
+import { SharedModule } from '../shared/shared.module';
+import { ElementsModule } from '../elements/elements.module';
 
 import { TextInputComponent } from './text-input.component';
 
@@ -11,13 +11,17 @@ describe('TextInputComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TextInputComponent, IconLocationDirective]
+      imports: [SharedModule, ElementsModule],
+      declarations: [TextInputComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TextInputComponent);
     component = fixture.componentInstance;
+
+    component.id = 'test';
+
     fixture.detectChanges();
   });
 
