@@ -1,13 +1,13 @@
-import { Component, OnInit, Input, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
-import { Color, Icon, TextAlignment } from '@cemiyet/core';
+import { Color, Icon, IconLocation, TextAlignment } from '@cemiyet/core';
 
 @Component({
   selector: 'cemiyet-text-input',
   templateUrl: './text-input.component.html',
   styleUrls: ['./text-input.component.scss']
 })
-export class TextInputComponent implements OnInit, AfterViewInit {
+export class TextInputComponent implements OnInit {
   @Input() id: string;
   @Input() placeholder = '';
   @Input() type: 'text' | 'password' | 'email' = 'text';
@@ -17,7 +17,7 @@ export class TextInputComponent implements OnInit, AfterViewInit {
   @Input() textAlignment: TextAlignment = 'left';
 
   @Input() icon: Icon;
-  @Input() iconLocation: 'left' | 'right';
+  @Input() iconLocation: IconLocation = 'left';
 
   @Input() label: string;
   @Input() labelColor: Color = 'kournikova';
@@ -25,12 +25,9 @@ export class TextInputComponent implements OnInit, AfterViewInit {
   @Input() error: string;
   @Input() hasError = false;
 
-  @ViewChild('inputIcon', { static: false })
-  inputIcon: ElementRef<HTMLElement>;
-
   constructor() {}
 
-  ngOnInit() {}
-
-  ngAfterViewInit() {}
+  ngOnInit() {
+    if (!this.id) throw new Error('Id must be provided!');
+  }
 }
