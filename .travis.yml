@@ -7,7 +7,19 @@ branches:
   only:
     - develop
 
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 script:
   - yarn
   - yarn run build
   - yarn run test --silent --coverage
+
+after_script:
+  - ./cc-test-reporter format-coverage -t lcov -o coverage/codeclimate.core.json coverage/libs/core/lcov.info
+  - ./cc-test-reporter format-coverage -t lcov -o coverage/codeclimate.components.json coverage/libs/components/lcov.info
+  - ./cc-test-reporter format-coverage -t lcov -o coverage/codeclimate.web.json coverage/apps/web/lcov.info
+  - ./cc-test-reporter sum-coverage coverage/codeclimate.*.json -p 3
+  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage; fi
