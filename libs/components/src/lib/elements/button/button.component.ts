@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
-import { Color, ColorVariant, FontSize } from '@cemiyet/core';
+import { ColorVariant, FontSize } from '@cemiyet/core';
 
 @Component({
   selector: 'cemiyet-button',
@@ -7,7 +7,6 @@ import { Color, ColorVariant, FontSize } from '@cemiyet/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {
-  @Input() text: string;
   @Input() fontSize: FontSize = 'base';
   @Input() variant: ColorVariant = 'LIGHT';
   @Input() outline: boolean;
@@ -16,7 +15,5 @@ export class ButtonComponent implements OnInit {
 
   ngOnInit() {
     this.outline = this.outline !== undefined;
-
-    if (!this.text) throw new Error('Text must be provided!');
   }
 }
