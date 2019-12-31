@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedModule } from '../../shared/shared.module';
+
 import { TextComponent } from './text.component';
 
 describe('TextComponent', () => {
@@ -8,9 +10,9 @@ describe('TextComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TextComponent ]
-    })
-    .compileComponents();
+      imports: [SharedModule],
+      declarations: [TextComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

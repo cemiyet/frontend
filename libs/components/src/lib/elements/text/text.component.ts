@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ColorVariant, FontSize } from '@cemiyet/core';
 
 @Component({
@@ -6,14 +6,7 @@ import { ColorVariant, FontSize } from '@cemiyet/core';
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.scss']
 })
-export class TextComponent implements AfterViewInit {
-  @Input() text: string;
+export class TextComponent {
   @Input() size: FontSize = 'base';
   @Input() variant: ColorVariant = 'LIGHT';
-
-  constructor() {}
-
-  ngAfterViewInit() {
-    if (!this.text) throw new Error('Text must be provided!');
-  }
 }
