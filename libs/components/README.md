@@ -2,7 +2,7 @@
 
 > Provides angular components.
 
-## Current State (0/39)
+## Current State (4/40)
 
 - [ ] Button Group
 - [ ] Card
@@ -20,14 +20,15 @@
   - [ ] Date Range
   - [ ] Time
 
-### Elements Module (0/5)
+### Elements Module (4/6)
 
 - [ ] Elements
-  - [ ] Button
+  - [x] Button
   - [ ] Divider
-  - [ ] Icon
+  - [x] Icon
+  - [x] Logo
   - [ ] Tag
-  - [ ] Text
+  - [x] Text
 
 ### Forms Module (0/11)
 
