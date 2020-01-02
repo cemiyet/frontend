@@ -7,7 +7,7 @@ import { ColorVariant, FontSize } from '@cemiyet/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {
-  @Input() fontSize: FontSize = 'base';
+  @Input() size: FontSize = 'base';
   @Input() variant: ColorVariant = 'LIGHT';
   @Input() outline: boolean;
 
