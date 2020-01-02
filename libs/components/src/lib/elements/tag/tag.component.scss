@@ -1,0 +1,25 @@
+@import '../../shared/_variables.scss';
+
+.c-tag {
+  @apply py-1 px-2 rounded-lg font-normal tracking-wide leading-tight select-none;
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  @each $color, $value in $theme-colors {
+    &.#{$color} {
+      color: map-get($value, 'fg');
+      border-color: map-get($value, 'bg');
+      background-color: map-get($value, 'bg');
+
+      &.outline {
+        color: map-get($value, 'bg');
+      }
+    }
+  }
+
+  &.outline {
+    @apply bg-transparent border-2;
+  }
+}
