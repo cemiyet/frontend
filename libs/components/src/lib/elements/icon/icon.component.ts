@@ -9,8 +9,8 @@ import { Icon, ColorVariant, FontSize } from '@cemiyet/core';
 })
 export class IconComponent implements OnInit {
   @Input() icon: Icon;
-  @Input() variant: ColorVariant = 'LIGHT';
   @Input() size: FontSize = 'base';
+  @Input() variant: ColorVariant = 'LIGHT';
 
   constructor() {}
 
