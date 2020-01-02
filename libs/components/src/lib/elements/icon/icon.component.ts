@@ -9,13 +9,12 @@ import { Icon, ColorVariant, FontSize } from '@cemiyet/core';
 })
 export class IconComponent implements OnInit {
   @Input() icon: Icon;
-  @Input() variant: ColorVariant;
+  @Input() variant: ColorVariant = 'LIGHT';
   @Input() size: FontSize = 'base';
 
   constructor() {}
 
   ngOnInit() {
     if (!this.icon) throw new Error('Icon type must be provided!');
-    if (!this.variant) throw new Error('Color variant must be provided!');
   }
 }
