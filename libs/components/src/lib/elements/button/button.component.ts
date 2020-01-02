@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ColorVariant, FontSize } from '@cemiyet/core';
 
 @Component({
@@ -11,7 +11,7 @@ export class ButtonComponent implements OnInit {
   @Input() variant: ColorVariant = 'LIGHT';
   @Input() outline: boolean;
 
-  constructor(private el: ElementRef) {}
+  constructor() {}
 
   ngOnInit() {
     this.outline = this.outline !== undefined;
