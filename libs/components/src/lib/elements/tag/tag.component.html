@@ -1,8 +1,16 @@
 <div
   class="c-tag"
   [class.outline]="outline"
+  [class.has-icon]="removable"
   [cemiyetFontSize]="size"
   [cemiyetColorVariant]="variant"
 >
   <ng-content></ng-content>
+  <cemiyet-icon
+    *ngIf="removable"
+    icon="clear"
+    [size]="size"
+    [variant]="iconVariant"
+    (click)="onRemoveClicked($event)"
+  ></cemiyet-icon>
 </div>

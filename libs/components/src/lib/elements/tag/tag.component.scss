@@ -7,6 +7,14 @@
     @apply outline-none;
   }
 
+  &.has-icon {
+    @apply flex items-center;
+
+    cemiyet-icon {
+      @apply inline-flex pl-2 cursor-pointer;
+    }
+  }
+
   @each $color, $value in $theme-colors {
     &.#{$color} {
       color: map-get($value, 'fg');
