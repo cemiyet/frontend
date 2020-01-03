@@ -1,9 +1,7 @@
 @import '../../shared/_variables.scss';
 
 .c-icon {
-  @apply inline-block;
-  @apply font-normal;
-  @apply tracking-normal normal-case leading-none not-italic whitespace-no-wrap antialiased;
+  @apply font-normal tracking-normal normal-case leading-none not-italic whitespace-no-wrap antialiased;
 
   font-family: 'Material Icons';
   word-wrap: normal;
