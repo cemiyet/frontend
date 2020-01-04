@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SharedModule } from '../../shared/shared.module';
 
 import { TagComponent } from './tag.component';
+import { IconComponent } from '../icon/icon.component';
 
 describe('TagComponent', () => {
   let component: TagComponent;
@@ -11,7 +12,7 @@ describe('TagComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SharedModule],
-      declarations: [TagComponent]
+      declarations: [TagComponent, IconComponent]
     }).compileComponents();
   }));
 
