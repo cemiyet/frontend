@@ -13,7 +13,6 @@ export class TagComponent implements OnInit {
   @Input() outline: boolean;
 
   private iconVariant: ColorVariant = 'LIGHT';
-  private removed = false;
 
   constructor(private el: ElementRef) {}
 
