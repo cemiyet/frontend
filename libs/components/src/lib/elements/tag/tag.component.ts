@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
-import { ColorVariant, FontSize } from '@cemiyet/core';
+import { ColorVariant, FontSize, Icon, IconLocation } from '@cemiyet/core';
 
 @Component({
   selector: 'cemiyet-tag',
@@ -12,13 +12,18 @@ export class TagComponent implements OnInit {
   @Input() removable: boolean;
   @Input() outline: boolean;
 
+  @Input() icon: Icon;
+  @Input() iconLocation: IconLocation;
   private iconVariant: ColorVariant = 'LIGHT';
+
+  private hasIcon: boolean;
 
   constructor(private el: ElementRef) {}
 
   ngOnInit() {
     this.removable = this.removable !== undefined;
     this.outline = this.outline !== undefined;
+    this.hasIcon = this.removable || this.icon !== undefined;
 
     switch (this.variant) {
       case 'LIGHT':
