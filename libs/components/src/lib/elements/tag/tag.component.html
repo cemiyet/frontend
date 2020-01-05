@@ -4,9 +4,20 @@
   [class.has-icon]="hasIcon"
   [cemiyetFontSize]="size"
   [cemiyetColorVariant]="variant"
+  [cemiyetIconLocation]="iconLocation"
 >
-  <ng-content></ng-content>
   <cemiyet-icon
+    id="icon"
+    *ngIf="icon !== undefined"
+    [icon]="icon"
+    [size]="size"
+    [variant]="iconVariant"
+  ></cemiyet-icon>
+
+  <ng-content></ng-content>
+
+  <cemiyet-icon
+    id="remove"
     *ngIf="removable"
     icon="clear"
     [size]="size"
