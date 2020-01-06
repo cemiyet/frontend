@@ -1,0 +1,7 @@
+.c-divider {
+  @apply my-2 border-white border;
+
+  &.vertical {
+    @apply my-0 mx-2 h-full;
+  }
+}
