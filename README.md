@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="img/logo.svg" alt="Cemiyet">
+  <img src="img/logo.png" alt="Cemiyet">
   <br>
   <br>
   <br>
