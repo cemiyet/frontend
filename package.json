@@ -39,25 +39,25 @@
     "help": "nx help"
   },
   "dependencies": {
-    "@angular/animations": "^8.2.0",
-    "@angular/common": "^8.2.0",
-    "@angular/compiler": "^8.2.0",
-    "@angular/core": "^8.2.0",
-    "@angular/forms": "^8.2.0",
-    "@angular/platform-browser": "^8.2.0",
-    "@angular/platform-browser-dynamic": "^8.2.0",
-    "@angular/router": "^8.2.0",
+    "@angular/animations": "^9.1.0",
+    "@angular/common": "^9.1.0",
+    "@angular/compiler": "^9.1.0",
+    "@angular/core": "^9.1.0",
+    "@angular/forms": "^9.1.0",
+    "@angular/platform-browser": "^9.1.0",
+    "@angular/platform-browser-dynamic": "^9.1.0",
+    "@angular/router": "^9.1.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.3",
     "tailwindcss": "^1.1.4",
-    "zone.js": "^0.9.1"
+    "zone.js": "^0.10.3"
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "^8.4.1",
-    "@angular-devkit/build-angular": "^0.803.25",
-    "@angular/cli": "8.3.25",
-    "@angular/compiler-cli": "^8.2.0",
-    "@angular/language-service": "^8.2.0",
+    "@angular-devkit/build-angular": "^0.901.0",
+    "@angular/cli": "9.1.0",
+    "@angular/compiler-cli": "^9.1.0",
+    "@angular/language-service": "^9.1.0",
     "@nrwl/angular": "^8.9.0",
     "@nrwl/cypress": "8.9.0",
     "@nrwl/jest": "8.9.0",
@@ -80,6 +80,6 @@
     "ts-jest": "24.0.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.8.3"
   }
 }
