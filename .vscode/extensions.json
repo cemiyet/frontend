@@ -9,6 +9,6 @@
     "ms-vscode.vscode-typescript-tslint-plugin",
     "natewallace.angular2-inline",
     "nrwl.angular-console",
-    "thibaudcolas.stylelint"
+    "stylelint.stylelint"
   ]
 }
