@@ -1,9 +1,0 @@
-@import '../../shared/_variables.scss';
-
-.c-text {
-  @each $color, $value in $theme-colors {
-    &.#{$color} {
-      color: map-get($value, 'bg');
-    }
-  }
-}

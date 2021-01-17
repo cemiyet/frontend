@@ -1,3 +1,0 @@
-# Core
-
-> Provides core types.
