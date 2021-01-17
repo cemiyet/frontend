@@ -1,16 +1,16 @@
 {
   "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}Cemiyet",
+
+  // telemetry
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+
   "files.exclude": {
     "**/.git": true,
     "**/.DS_Store": true,
     "node_modules/": true,
     "*.lock": true,
   },
-
-  // telemetry
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
-  "angularConsole.enableTelemetry": false,
 
   // default formatters
   "[json]": {
@@ -33,7 +33,7 @@
   },
 
   "editor.formatOnPaste": true,
-  "editor.rulers": [100],
+  "editor.rulers": [120],
 
   // tailwind autocomplete for emmet
   "tailwindCSS.emmetCompletions": true,
