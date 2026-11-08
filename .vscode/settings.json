@@ -1,41 +1,42 @@
 {
   "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}Cemiyet",
 
+  // Editor
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.rulers": [100],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "explicit"
+  },
+
+  // prettier
+  "prettier.requireConfig": true,
+
   // telemetry
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "off",
+  "telemetry.feedback.enabled": false,
+
+  // TypeScript / JavaScript
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+
+  // files
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
 
   "files.exclude": {
     "**/.git": true,
     "**/.DS_Store": true,
-    "node_modules/": true,
-    "*.lock": true,
+    "**/node_modules": true,
+    "**/dist": true
   },
 
-  // default formatters
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  "editor.formatOnPaste": true,
-  "editor.rulers": [120],
-
-  // tailwind autocomplete for emmet
+  // Tailwind
   "tailwindCSS.emmetCompletions": true,
 
   // stylelint
@@ -43,16 +44,5 @@
   "less.validate": false,
   "scss.validate": false,
   "stylelint.enable": true,
-  "stylelint.config": {
-    "extends": "stylelint-config-recommended",
-    "rules": {
-      "at-rule-no-unknown": [
-        true,
-        {
-          "ignoreAtRules": ["extends", "tailwind", "screen"]
-        }
-      ],
-      "unit-whitelist": ["em", "rem", "s"]
-    }
-  }
+  "stylelint.validate": ["css", "postcss", "scss", "less"]
 }
