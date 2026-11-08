@@ -44,3 +44,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Skills folders
+.agents/skills
+.codex/skills
+.claude/skills
