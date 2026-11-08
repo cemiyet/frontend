@@ -1,15 +1,10 @@
 {
   "recommendations": [
-    "angular.ng-template",
     "bradlc.vscode-tailwindcss",
     "christian-kohler.npm-intellisense",
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
-    "eg2.vscode-npm-script",
     "esbenp.prettier-vscode",
-    "johnpapa.angular2",
-    "natewallace.angular2-inline",
-    "nrwl.angular-console",
     "stylelint.vscode-stylelint"
   ]
 }
