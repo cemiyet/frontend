@@ -1,9 +1,10 @@
+# dot folders
+.*/
+
+## except github folder
+!.github/
+
 node_modules/
 dist/
 .env.local
 .DS_Store
-
-# Skills folders
-.agents/skills
-.codex/skills
-.claude/skills
